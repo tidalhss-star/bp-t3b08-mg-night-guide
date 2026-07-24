@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img">
-  <metadata>BPaaS site identity 0a07ebdcaae1efb7</metadata>
-  <rect width="64" height="64" rx="11" fill="hsl(47 58% 26%)"/>
-  <path d="M36 0h28v64H22Z" fill="hsl(185 63% 77%)" opacity="0.82"/>
-  <g transform="rotate(151 32 32)" opacity="0.42"><path d="M14 20h36L32 50Z" fill="none" stroke="#ffffff" stroke-width="7" stroke-linejoin="round"/></g>
-  <text x="32" y="39" text-anchor="middle" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" letter-spacing="0">MS</text>
+  <title>마곡 유흥 가이드</title>
+  <rect width="64" height="64" rx="17" fill="hsl(47 58% 30%)"/>
+  <g transform="rotate(270 32 32)"><circle cx="16" cy="16" r="5" fill="hsl(47 24% 96%)"/><circle cx="32" cy="16" r="5" fill="hsl(47 24% 96%)"/><circle cx="48" cy="16" r="5" fill="hsl(47 24% 96%)"/><circle cx="16" cy="32" r="5" fill="hsl(47 24% 96%)"/><circle cx="32" cy="32" r="6" fill="hsl(207 68% 69%)"/><circle cx="48" cy="32" r="5" fill="hsl(47 24% 96%)"/><circle cx="16" cy="48" r="5" fill="hsl(47 24% 96%)"/><circle cx="32" cy="48" r="5" fill="hsl(47 24% 96%)"/><circle cx="48" cy="48" r="5" fill="hsl(47 24% 96%)"/></g>
 </svg>
