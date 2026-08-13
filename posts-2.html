@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · t3b08-mg-night-guide</title>
+  <meta name="description" content="t3b08-mg-night-guide에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://magok-song-room.program-school.online/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #0a0a0a; color: #e5e5e5; line-height: 1.6; }
+ h1, h2, h3, h4, h5, h6 { font-weight: 700; letter-spacing: -0.02em; color: #ffffff; }
+ h1 { font-size: 2.8rem; line-height: 1.2; margin-bottom: 1.5rem; }
+ h2 { font-size: 2rem; line-height: 1.3; margin-bottom: 1rem; border-left: 4px solid #d4af37; padding-left: 1rem; }
+ h3 { font-size: 1.4rem; line-height: 1.4; margin-bottom: 0.8rem; }
+ p { margin-bottom: 1.2rem; font-size: 1.05rem; color: #c0c0c0; }
+ a { color: #d4af37; text-decoration: none; transition: color 0.3s ease; }
+ a:hover { color: #f0d060; }
+ .drop-cap::first-letter { font-size: 3.5rem; font-weight: 700; float: left; line-height: 1; margin-right: 0.5rem; color: #d4af37; }
+ .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+ header { background: linear-gradient(180deg, #111 0%, #0a0a0a 100%); border-bottom: 1px solid #1f1f1f; padding: 1.2rem 0; position: sticky; top: 0; z-index: 100; }
+ .site-title { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.03em; color: #ffffff; }
+ .site-title span { color: #d4af37; }
+ nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+ .nav-links { display: flex; gap: 2rem; align-items: center; }
+ .nav-links a { font-size: 0.95rem; font-weight: 500; color: #a0a0a0; padding: 0.4rem 0; border-bottom: 2px solid transparent; transition: all 0.3s ease; }
+ .nav-links a:hover { color: #d4af37; border-bottom-color: #d4af37; }
+ .nav-links a.active { color: #d4af37; border-bottom-color: #d4af37; }
+ .hamburger { display: none; flex-direction: column; cursor: pointer; background: none; border: none; padding: 0.5rem; }
+ .hamburger span { width: 28px; height: 2px; background: #d4af37; margin: 4px 0; transition: 0.3s; }
+ .tel-link { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #d4af37, #b8962e); color: #0a0a0a; padding: 0.6rem 1.4rem; border-radius: 50px; font-weight: 700; font-size: 0.95rem; transition: transform 0.3s ease; }
+ .tel-link:hover { transform: scale(1.05); color: #0a0a0a; }
+ main { padding: 3rem 0; }
+ .hero-section { padding: 4rem 0 3rem; text-align: center; }
+ .hero-section h1 { font-size: 3.2rem; }
+ .hero-section p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; }
+ .section { margin-bottom: 4rem; }
+ .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin: 2rem 0; }
+ .card { background: #111; border: 1px solid #1f1f1f; border-radius: 16px; padding: 2rem; transition: transform 0.3s ease, border-color 0.3s ease; }
+ .card:hover { transform: translateY(-4px); border-color: #d4af37; }
+ .card h3 { color: #d4af37; }
+ .card p { font-size: 0.95rem; }
+ .stat-row { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0; }
+ .stat-item { text-align: center; padding: 1.5rem 2rem; background: #111; border-radius: 12px; border: 1px solid #1f1f1f; min-width: 160px; }
+ .stat-number { font-size: 2.2rem; font-weight: 800; color: #d4af37; }
+ .stat-label { font-size: 0.9rem; color: #888; }
+ .faq-list { max-width: 800px; margin: 2rem auto; }
+ .faq-item { border-bottom: 1px solid #1f1f1f; padding: 1.2rem 0; }
+ .faq-question { font-weight: 600; font-size: 1.1rem; color: #ffffff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+ .faq-question::after { content: '+'; font-size: 1.4rem; color: #d4af37; }
+ .faq-answer { margin-top: 0.8rem; font-size: 0.95rem; color: #a0a0a0; display: none; }
+ .faq-item.active .faq-answer { display: block; }
+ .faq-item.active .faq-question::after { content: '−'; }
+ .cta-section { text-align: center; padding: 3rem 0; border-top: 1px solid #1f1f1f; margin-top: 3rem; }
+ .cta-section h2 { border-left: none; }
+ @media (max-width: 768px) {
+ .container { padding: 0 1.2rem; }
+ h1 { font-size: 2rem; }
+ h2 { font-size: 1.5rem; }
+ .hero-section h1 { font-size: 2.2rem; }
+ .nav-links { display: none; flex-direction: column; width: 100%; padding: 1rem 0; gap: 1rem; }
+ .nav-links.open { display: flex; }
+ .hamburger { display: flex; }
+ .card-grid { grid-template-columns: 1fr; }
+ .stat-row { flex-direction: column; align-items: center; }
+ .stat-item { width: 100%; max-width: 280px; }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · t3b08-mg-night-guide">
+  <meta property="og:description" content="t3b08-mg-night-guide에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://magok-song-room.program-school.online/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container">
+ <nav>
+ <div class="site-title"><span>✦</span> 마곡 유흥 가이드</div>
+ <div class="nav-links">
+ <a href="/">홈</a>
+ <a href="/info" class="active">정보</a>
+ <a href="/guide">가이드</a>
+ <a href="/review">리뷰</a>
+ <a href="/contact">문의</a>
+ </div>
+ <button class="hamburger" aria-label="메뉴 열기">
+ 
+ 
+ 
+ </button>
+ 
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 40개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0202.html">마곡 유흥 가이드 기반 마포 홍대 단체 가라오케 예약 가이드 및 합정 정보</a>
+        <p class="post-item__summary">많은 이들이 가라오케 예약이 단순히 전화 한 통으로 해결되는 가벼운 일이라고 오해하곤 합니다. 하지만 마곡 유흥 가이드 정보를 참고하더라도 실제 마포 홍대 지역의 대규모 모임은 체계적인 준비가 필수</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0203.html">마곡 유흥 가이드 관련 구글 인덱싱 속도 초고속 광회선 대역폭 최적화 팁</a>
+        <p class="post-item__summary">데이터 전송 효율을 극대화하려면 서버 응답 시간과 대역폭의 안정적인 확보가 충족되어야 합니다. 마곡 유흥 가이드 콘텐츠를 운영하면서 검색 엔진의 크롤러가 사이트를 빠르게 방문하게 하려면 최적화된 인</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0204.html">마곡 유흥 가이드 기반 구글 신뢰 지수 모발이식 솔루션 도메인 파워 증폭</a>
+        <p class="post-item__summary">자신의 웹사이트가 검색 결과에서 왜 낮은 지수에 머무르고 있는지 진지하게 고민해 본 적이 있습니까? 마곡 유흥 가이드 콘텐츠를 운영하는 것과 마찬가지로, 어떤 주제의 사이트든 검색 엔진은 신뢰 지수</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0463.html">마곡 유흥 가이드 보며 피하는 합정 셔츠룸 추천정보 예약의 실패 요소</a>
+        <p class="post-item__summary">많은 분이 마곡 유흥 가이드 등을 참고하며 밤 문화 정보를 습득하지만, 정작 예약을 진행할 때 예상치 못한 난관을 겪기도 합니다. 합정 지역에서 셔츠룸을 이용하려고 할 때 흔히 발생하는 실패 지점은</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0464.html">마곡 유흥 가이드 확인하는 공덕 가라오케 추천정보 접근성 체크리스트</a>
+        <p class="post-item__summary">여가 시간을 활용해 즐거운 장소를 찾을 때 마곡 유흥 가이드 수준의 정보를 검토하는 것은 매우 현명한 일입니다. 특히 공덕 지역의 가라오케를 선택할 때는 위치와 접근성을 최우선으로 고려해야 이동의 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0465.html">마곡 유흥 가이드 활용해 상수 마사지 추천정보 확인하기</a>
+        <p class="post-item__summary">낯선 지역에서 피로를 풀기 위해 방문한 곳이 기대와 다르다면 큰 낭패를 보기 마련입니다. 특히 마곡 유흥 가이드 정보를 찾는 분들이라면 이동 중에 들를 수 있는 인근 휴식처를 함께 고려하게 됩니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0466.html">마곡 유흥 가이드 참고하여 망원 노래방 추천정보 비교하기</a>
+        <p class="post-item__summary">노래방은 늦은 밤에만 즐겨야 한다는 편견은 이제 지양해야 할 구식 사고방식입니다. 마곡 유흥 가이드 등에서 다루는 정보들을 보면 낮 시간대나 초저녁에 이용할 때 누릴 수 있는 혜택이 생각보다 많음을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0467.html">마곡 유흥 가이드 반영한 홍대 노래방 추천정보 체크리스트</a>
+        <p class="post-item__summary">쾌적한 환경, 최신 음향 시스템, 그리고 인원수에 적합한 방의 크기까지 노래방을 선택할 때 충족해야 할 조건은 매우 많습니다. 마곡 유흥 가이드 정보를 참고하며 인근 지역인 홍대까지 범위를 넓히는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0468.html">마곡 유흥 가이드 활용해 공덕 셔츠룸 추천정보 비교 분석</a>
+        <p class="post-item__summary">여러분은 새로운 유흥 업체를 선정할 때 어떤 기준을 가장 중요하게 생각하시나요? 많은 분이 마곡 유흥 가이드 등을 통해 정보를 얻지만, 공덕 지역의 셔츠룸을 이용할 때는 더욱 신중한 판단이 요구됩니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0469.html">마곡 유흥 가이드 활용해 연남 유흥 추천정보 확인하는 법</a>
+        <p class="post-item__summary">정보가 넘쳐나는 시대에 정확한 유흥 관련 데이터를 선별하는 것은 매우 중요한 역량이 되었습니다. 마곡 유흥 가이드 방식을 응용하면 연남 지역의 환경을 파악하는 데 큰 도움을 얻을 수 있습니다. 우선</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0470.html">마곡 유흥 가이드 기반 마곡 가라오케 추천정보 분석</a>
+        <p class="post-item__summary">마곡 지역의 여가 시간을 알차게 보내기 위해서는 마곡 유흥 가이드에서 제시하는 기초 기준을 이해해야 합니다. 특히 마곡 지역에서 가라오케를 선택할 때는 대형 프랜차이즈형 업소와 개인 운영 업소 사이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0471.html">마곡 유흥 가이드 살펴본 마곡 유흥 추천정보 예약법</a>
+        <p class="post-item__summary">많은 이들이 마곡 유흥 가이드 내용을 간과하고 현장을 방문했다가 실패를 경험하곤 합니다. 가장 흔히 발생하는 실패 지점은 사전 예약 절차를 생략하고 무작정 방문하는 행위입니다. 인기 있는 장소는 금</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0472.html">마곡 유흥 가이드로 보는 합정 노래방 추천정보 체크리스트</a>
+        <p class="post-item__summary">마곡 유흥 가이드의 원리를 학습하면 합정 지역 노래방을 선택할 때도 큰 이점을 얻을 수 있습니다. 노래방 선정 시 가장 먼저 확인해야 할 점은 이동 동선과 접근성입니다. 주거지나 약속 장소에서 도보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0473.html">마곡 유흥 가이드 활용해 찾는 연남 클럽 추천정보</a>
+        <p class="post-item__summary">주말 저녁 연남동 거리를 걷다 보면 수많은 젊은이들이 활기차게 움직이는 모습을 흔히 볼 수 있습니다. 마곡 유흥 가이드 내용을 참고하여 연남동을 방문하는 초행자들은 종종 예상치 못한 분위기에 당황하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-1.html">마곡 유흥 가이드</a>
+        <p class="post-item__summary">마곡 지역은 젊은 직장인과 학생들 사이에서 활발한 여가 문화가 형성된 곳으로, 다양한 형태의 유흥 시설이 밀집되어 있습니다. 이 지역을 처음 방문하는 이용자들은 정보가 많아 오히려 혼란을 겪는 경우</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-2.html">마곡 유흥 가이드</a>
+        <p class="post-item__summary">마곡 지역은 서울 서북부에 위치한 상업 지구로, 다양한 유흥 시설이 모여 있습니다. 이 가이드는 마곡의 유흥 환경을 전반적으로 안내하는 것을 목적으로 합니다. 구체적인 업소 정보나 가격은 직접 확인</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-1.html">마곡 유흥 가이드</a>
+        <p class="post-item__summary">마곡은 업무 단지이자 주거 환경이 잘 조성된 지역으로, 저녁 시간대에는 동료들과 모임을 가지는 분들이 많습니다. 이렇게 마곡에서 시간을 보내는 이들이 주로 찾는 것은 노래방과 펍, 술집 등 다양한 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-2.html">마곡 유흥 가이드</a>
+        <p class="post-item__summary">마곡은 최신 문화 시설과 편리한 대중교통이 어우러진 지역으로, 퇴근 후나 주말 여유 시간에 적합한 다양한 여가 공간을 제공합니다. 유흥을 계획할 때는 먼저 목적지를 명확히 하고, 원하는 분위기나 편</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-3.html">마곡 유흥 가이드</a>
+        <p class="post-item__summary">마곡 지역은 서울의 대표적인 비즈니스 및 Entertainment 복합 공간으로, 다양한 유흥 시설과 즐길 거리가 밀집되어 있습니다. 이 가이드는 해당 지역의 전반적인 유흥 환경을 안내하는 목적으로</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-umlpbl.html">마곡 유흥 가이드</a>
+        <p class="post-item__summary">마곡에서 유흥 매장을 처음 찾아보는 경우, 어떤 순서로 정보를 확인해야 할지 막막할 수 있다. 이 페이지는 예약 방식부터 비용이 정해지는 구조, 지역 특성까지 방문 전에 순서대로 짚어볼 수 있도록 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
